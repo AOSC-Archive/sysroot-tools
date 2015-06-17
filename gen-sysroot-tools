@@ -1,0 +1,4 @@
+#! /bin/bash
+cp sysroot-tools.in sysroot-tools
+sed -i 's|@REAL_PATH@|'"$1"'|g' sysroot-tools
+sed -i 's|@SYSROOT@|'"$2"'|g' sysroot-tools

@@ -1,0 +1,11 @@
+#! /bin/bash
+CHARACTER="$(basename $0)"
+export PATH="@REAL_PATH@"
+export SYSROOT="@SYSROOT@"
+if [ "$CHARACTER" = "sysroot-tools" ]
+then
+	$CHARACTER="$(basename $1)"
+	shift
+fi
+case $CHARACTER in
+	*-gcc)	
